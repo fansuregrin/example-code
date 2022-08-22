@@ -6,6 +6,7 @@ A ``Sentence`` is built from a ``str`` and allows iteration
 word-by-word.
 
 ::
+
     >>> s = Sentence('The time has come')
     >>> s
     Sentence('The time has come')
@@ -26,7 +27,7 @@ word-by-word.
     StopIteration
 
 
-Any punctuation is skipped while iterating::
+Any punctuation is skipped while iterating ::
 
     >>> s = Sentence('"The time has come," the Walrus said,')
     >>> s
@@ -35,7 +36,7 @@ Any punctuation is skipped while iterating::
     ['The', 'time', 'has', 'come', 'the', 'Walrus', 'said']
 
 
-White space including line breaks are also ignored::
+White space including line breaks are also ignored ::
 
     >>> s = Sentence('''"The time has come," the Walrus said,
     ...                 "To talk of many things:"''')
@@ -45,7 +46,7 @@ White space including line breaks are also ignored::
     ['The', 'time', 'has', 'come', 'the', 'Walrus', 'said', 'To', 'talk', 'of', 'many', 'things']
 
 
-Accented Latin characters are also recognized as word characters::
+Accented Latin characters are also recognized as word characters ::
 
     >>> s = Sentence('Agora vou-me. Ou me vão?')
     >>> s
